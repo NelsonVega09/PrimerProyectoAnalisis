@@ -11,22 +11,32 @@ public class Grafo {
     }
     
     
-    public void insercionVertices(int beneficio){
-        Vertice nuevoVertice = new Vertice(beneficio);
+    public void insercionVertices(int beneficio, String lugar){
+        Vertice nuevoVertice = new Vertice(beneficio, lugar);
+        if(grafo.isEmpty()){
+                grafo.add(nuevoVertice);
+                return;
+        }
+        for(int i=0 ; i<grafo.size() ; i++){
+                if(nuevoVertice.beneficio > grafo.get(i).beneficio){
+                        grafo.add(i, nuevoVertice);
+                        return;
+                }
+        }
         grafo.add(nuevoVertice);
     }
    
     
-    public void insertarArco(int origen, int destino){
+    public void insertarArco(String lugar, String destino){
         Arco nuevoArco = new Arco(destino);
-        Vertice vOrigen = buscarVertice(origen);
+        Vertice vOrigen = buscarVertice(lugar);
         vOrigen.listaArcos.add(nuevoArco);
     }
     
     
-    public Vertice buscarVertice(int beneficio){
+    public Vertice buscarVertice(String lugar){
         for (int i=0; i<grafo.size() ; i++){
-            if(grafo.get(i).beneficio == beneficio)
+            if(grafo.get(i).lugar == lugar)
                 return grafo.get(i);
         }
         return null;
@@ -41,6 +51,12 @@ public class Grafo {
                         grafo.get(i).listaArcos.get(e).visitado = false;
                 }
         }
+    }
+    
+    public void imprimir(){
+            for(int i=0 ; i<grafo.size() ; i++){
+                    System.out.println(grafo.get(i).lugar+" = "+grafo.get(i).beneficio+"     ");
+            }
     }
     
     

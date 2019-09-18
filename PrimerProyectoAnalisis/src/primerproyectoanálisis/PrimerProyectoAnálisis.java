@@ -1,6 +1,8 @@
 package primerproyectoanálisis;
 
 import algoritmos.MaximoBeneficio;
+import algoritmos.ejerC;
+import algoritmos.greedy;
 import grafo.Grafo;
 
 public class PrimerProyectoAnálisis {
@@ -11,31 +13,31 @@ public class PrimerProyectoAnálisis {
         public static Grafo grafo4 = new Grafo();
         public static Grafo grafo5 = new Grafo();
         
-        public static MaximoBeneficio algoritmos = new MaximoBeneficio();
+        public static greedy greedy = new greedy();
         
         
         public static void main(String[] args) {
-                grafo1.insercionVertices(13);
-                grafo1.insercionVertices(4);
-                grafo1.insercionVertices(9);
-                grafo1.insercionVertices(6);
-                grafo1.insercionVertices(8);
-                grafo1.insercionVertices(7);
+                grafo1.insercionVertices(13, "Santa Clara");
+                grafo1.insercionVertices(4, "Florencia");
+                grafo1.insercionVertices(9, "Muelle");
+                grafo1.insercionVertices(6,"Cerro Cortez");
+                grafo1.insercionVertices(8, "Arenal");
+                grafo1.insercionVertices(7, "Cutris");
                 
-                grafo1.insertarArco(4, 9);
-                grafo1.insertarArco(13, 9);
-                grafo1.insertarArco(9, 6);
-                grafo1.insertarArco(9, 4);
-                grafo1.insertarArco(9, 13);
-                grafo1.insertarArco(6, 9);
-                grafo1.insertarArco(6, 7);
-                grafo1.insertarArco(6, 8);
-                grafo1.insertarArco(8, 6);
-                grafo1.insertarArco(7, 6);
+                grafo1.insertarArco("Florencia", "Muelle");
+                grafo1.insertarArco("Santa Clara", "Muelle");
+                grafo1.insertarArco("Muelle", "Cerro Cortez");
+                grafo1.insertarArco("Muelle", "Florencia");
+                grafo1.insertarArco("Muelle", "Santa Clara");
+                grafo1.insertarArco("Cerro Cortez", "Muelle");
+                grafo1.insertarArco("Cerro Cortez", "Cutris");
+                grafo1.insertarArco("Cerro Cortez", "Arenal");
+                grafo1.insertarArco("Arenal", "Cerro Cortez");
+                grafo1.insertarArco("Cutris", "Cerro Cortez");
                 
                 
                 
-                grafo2.insercionVertices(9);
+                /*grafo2.insercionVertices(9);
                 grafo2.insercionVertices(10);
                 grafo2.insercionVertices(5);
                 grafo2.insercionVertices(20);
@@ -252,23 +254,10 @@ public class PrimerProyectoAnálisis {
                 grafo5.insertarArco(6,19);
                 grafo5.insertarArco(19, 6);
                 grafo5.insertarArco(6,17);
-                grafo5.insertarArco(17, 6);
-
-
-                //primer metodo algoritmo c 
-                algoritmos.mayorNumRest(grafo1, grafo1.grafo.get(0));
-                System.out.println(algoritmos.cantRest);
-
-                 //segundo metodo algoritmo c 
-                //System.out.println(algoritmos.mayorNumRest2(grafo1.grafo));
+                grafo5.insertarArco(17, 6);*/
                 
-                //mayor beneficio
-                //System.out.println("Mayor beneficio= "+algoritmos.mayorBeneficio(grafo1.grafo));
+                greedy.greedy(grafo1);
                 
-                
-                //Eliminar basura
-                //grafo1.desmarcar();
-                //algoritmos.desmarcar();
         }
         
 }
