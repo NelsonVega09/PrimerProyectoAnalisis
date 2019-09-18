@@ -1,6 +1,6 @@
 package primerproyectoanálisis;
 
-import algoritmos.Algoritmos;
+import algoritmos.MaximoBeneficio;
 import grafo.Grafo;
 
 public class PrimerProyectoAnálisis {
@@ -11,7 +11,7 @@ public class PrimerProyectoAnálisis {
         public static Grafo grafo4 = new Grafo();
         public static Grafo grafo5 = new Grafo();
         
-        public static Algoritmos algoritmos = new Algoritmos();
+        public static MaximoBeneficio algoritmos = new MaximoBeneficio();
         
         
         public static void main(String[] args) {
