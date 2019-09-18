@@ -5,7 +5,7 @@ import grafo.Grafo;
 import grafo.Vertice;
 import java.util.ArrayList;
 
-public class Algoritmos {
+public class MaximoBeneficio {
 
         public int cantRest = 0;
         boolean marcar = true;
@@ -28,7 +28,7 @@ public class Algoritmos {
         }
         return mayorBeneficio;
     }
- 
+
     
     
     
