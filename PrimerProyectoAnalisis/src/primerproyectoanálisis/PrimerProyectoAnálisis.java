@@ -1,6 +1,7 @@
 package primerproyectoanálisis;
 import algoritmos.MaximoBeneficio;
 import algoritmos.ejerC;
+import algoritmos.ejerD;
 import algoritmos.greedy;
 import grafo.Grafo;
 
@@ -11,8 +12,12 @@ public class PrimerProyectoAnálisis {
         public static Grafo grafo3 = new Grafo();
         public static Grafo grafo4 = new Grafo();
         public static Grafo grafo5 = new Grafo();
-        
+        public static Grafo grafo6 = new Grafo();
+
         public static greedy greedy = new greedy();
+        public static MaximoBeneficio maximoBeneficio = new MaximoBeneficio();
+        public static ejerC ejerC = new ejerC();
+        public static ejerD ejerD = new ejerD();
         
         static void crearGrafos(){
             grafo1.insercionVertices(13, "Santa Clara");
@@ -43,26 +48,26 @@ public class PrimerProyectoAnálisis {
             grafo2.insercionVertices(11, "La Merced");
             grafo2.insercionVertices(4, "Santa Isabel");
             grafo2.insercionVertices(8, "San Miguel");
-            /*
-            grafo2.insertarArco(9, 10);
-            grafo2.insertarArco(10, 9);
-            grafo2.insertarArco(10, 5);
-            grafo2.insertarArco(5, 10);
-            grafo2.insertarArco(5, 20);
-            grafo2.insertarArco(5, 7);
-            grafo2.insertarArco(7, 5);
-            grafo2.insertarArco(7, 3);
-            grafo2.insertarArco(7, 11);
-            grafo2.insertarArco(7, 12);
-            grafo2.insertarArco(3, 7);
-            grafo2.insertarArco(11, 7);
-            grafo2.insertarArco(11, 4);
-            grafo2.insertarArco(11, 8);
-            grafo2.insertarArco(4, 11);
-            grafo2.insertarArco(8, 11);
-            grafo2.insertarArco(12, 7);
-            grafo2.insertarArco(20, 5);
-            */
+            
+            grafo2.insertarArco("Aguaz Zarcas", "Pital");
+            grafo2.insertarArco("Pital", "Aguaz Zarcas");
+            grafo2.insertarArco("Pital", "Venecia");
+            grafo2.insertarArco("Venecia", "Pital");
+            grafo2.insertarArco("Venecia", "Rio Cuarto");
+            grafo2.insertarArco("Venecia", "La Tabla");
+            grafo2.insertarArco("La Tabla", "Venecia");
+            grafo2.insertarArco("La Tabla", "Santa Rita");
+            grafo2.insertarArco("La Tabla", "La Merced");
+            grafo2.insertarArco("La Tabla", "La Flor");
+            grafo2.insertarArco("Santa Rita", "La Tabla");
+            grafo2.insertarArco("La Merced", "La Tabla");
+            grafo2.insertarArco("La Merced", "Santa Isabel");
+            grafo2.insertarArco("La Merced", "San Miguel");
+            grafo2.insertarArco("Santa Isabel", "La Merced");
+            grafo2.insertarArco("San Miguel", "La Merced");
+            grafo2.insertarArco("La Flor", "La Tabla");
+            grafo2.insertarArco("Rio Cuarto", "Venecia");
+            
             grafo3.insercionVertices(12,"San Ramon");
             grafo3.insercionVertices(7,"Zarcero");
             grafo3.insercionVertices(6,"Naranjo");
@@ -108,26 +113,26 @@ public class PrimerProyectoAnálisis {
             grafo3.insertarArco("Santa Clara", "Muelle");
             grafo3.insertarArco("Santa Clara", "Florencia");
             
-            grafo4.insercionVertices(1,"");
-            grafo4.insercionVertices(2,"");
-            grafo4.insercionVertices(3,"");
-            grafo4.insercionVertices(4,"");
-            grafo4.insercionVertices(5,"");
-            grafo4.insercionVertices(6,"");
-            grafo4.insercionVertices(7,"");
-            grafo4.insercionVertices(8,"");
-            grafo4.insercionVertices(9,"");
-            grafo4.insercionVertices(10,"");
-            grafo4.insercionVertices(11,"");
-            grafo4.insercionVertices(12,"");
-            grafo4.insercionVertices(13,"");
-            grafo4.insercionVertices(14,"");
-            grafo4.insercionVertices(15,"");
-            grafo4.insercionVertices(16,"");
-            grafo4.insercionVertices(17,"");
-            grafo4.insercionVertices(18,"");
-            grafo4.insercionVertices(19,"");
-            grafo4.insercionVertices(20,"");
+            grafo4.insercionVertices(1,"Rio Cuarto");
+            grafo4.insercionVertices(2,"Santa Rosa");
+            grafo4.insercionVertices(3,"Veracruz");
+            grafo4.insercionVertices(4,"Cutris");
+            grafo4.insercionVertices(5,"San Gerardo");
+            grafo4.insercionVertices(6,"Sucre");
+            grafo4.insercionVertices(7,"La Virgen");
+            grafo4.insercionVertices(8,"Desamparados");
+            grafo4.insercionVertices(9,"Barrio Mexico");
+            grafo4.insercionVertices(10,"Pocosol");
+            grafo4.insercionVertices(11,"La Palmera");
+            grafo4.insercionVertices(12,"Pital");
+            grafo4.insercionVertices(13,"Golfito");
+            grafo4.insercionVertices(14,"Venado");
+            grafo4.insercionVertices(15,"Puerto V");
+            grafo4.insercionVertices(16,"Venecia");
+            grafo4.insercionVertices(17,"Roomoser");
+            grafo4.insercionVertices(18,"Alajuela");
+            grafo4.insercionVertices(19,"Moravia");
+            grafo4.insercionVertices(20,"Perez Z");
             /*
             grafo4.insertarArco(1,12);
             grafo4.insertarArco(12,1);
@@ -164,31 +169,31 @@ public class PrimerProyectoAnálisis {
             grafo4.insertarArco(6,5);
             grafo4.insertarArco(5,6);
             */
-            grafo5.insercionVertices(1,"");
-            grafo5.insercionVertices(2,"");
-            grafo5.insercionVertices(3,"");
-            grafo5.insercionVertices(4,"");
-            grafo5.insercionVertices(5,"");
-            grafo5.insercionVertices(6,"");
-            grafo5.insercionVertices(7,"");
-            grafo5.insercionVertices(8,"");
-            grafo5.insercionVertices(9,"");
-            grafo5.insercionVertices(10,"");
-            grafo5.insercionVertices(11,"");
-            grafo5.insercionVertices(12,"");
-            grafo5.insercionVertices(13,"");
-            grafo5.insercionVertices(14,"");
-            grafo5.insercionVertices(15,"");
-            grafo5.insercionVertices(16,"");
-            grafo5.insercionVertices(17,"");
-            grafo5.insercionVertices(18,"");
-            grafo5.insercionVertices(19,"");
-            grafo5.insercionVertices(20,"");
-            grafo5.insercionVertices(21,"");
-            grafo5.insercionVertices(22,"");
-            grafo5.insercionVertices(23,"");
-            grafo5.insercionVertices(24,"");
-            grafo5.insercionVertices(25,"");
+            grafo5.insercionVertices(1,"Estados Unidos");
+            grafo5.insercionVertices(2,"Venezuela");
+            grafo5.insercionVertices(3,"Nicaragua");
+            grafo5.insercionVertices(4,"El Salvador");
+            grafo5.insercionVertices(5,"Argentina");
+            grafo5.insercionVertices(6,"Paraguay");
+            grafo5.insercionVertices(7,"Mexico");
+            grafo5.insercionVertices(8,"Colombia");
+            grafo5.insercionVertices(9,"Ecuador");
+            grafo5.insercionVertices(10,"Chile");
+            grafo5.insercionVertices(11,"Guatemala");
+            grafo5.insercionVertices(12,"Surinam");
+            grafo5.insercionVertices(13,"Haiti");
+            grafo5.insercionVertices(14,"Canda");
+            grafo5.insercionVertices(15,"Belice");
+            grafo5.insercionVertices(16,"Brasil");
+            grafo5.insercionVertices(17,"Panama");
+            grafo5.insercionVertices(18,"Guyana Francesa");
+            grafo5.insercionVertices(19,"Uruguay");
+            grafo5.insercionVertices(20,"Costa Rica");
+            grafo5.insercionVertices(21,"Rep. Dominicana <3");
+            grafo5.insercionVertices(22,"Honduras");
+            grafo5.insercionVertices(23,"Cuba");
+            grafo5.insercionVertices(24,"Peru");
+            grafo5.insercionVertices(25,"Bolivia");
             /*
             grafo5.insertarArco(1,20);
             grafo5.insertarArco(20, 1);
@@ -238,7 +243,33 @@ public class PrimerProyectoAnálisis {
             grafo5.insertarArco(6,19);
             grafo5.insertarArco(19, 6);
             grafo5.insertarArco(6,17);
-            grafo5.insertarArco(17, 6);*/    
+            grafo5.insertarArco(17, 6);*/
+            
+            grafo6.insercionVertices(1,"Estados Unidos");
+            grafo6.insercionVertices(2,"Venezuela");
+            grafo6.insercionVertices(3,"Nicaragua");
+            grafo6.insercionVertices(4,"El Salvador");
+            grafo6.insercionVertices(5,"Argentina");
+            grafo6.insercionVertices(6,"Paraguay");
+            grafo6.insercionVertices(7,"Mexico");
+            grafo6.insercionVertices(8,"Colombia");
+            grafo6.insercionVertices(9,"Ecuador");
+            grafo6.insercionVertices(10,"Chile");
+            grafo6.insercionVertices(11,"Guatemala");
+            grafo6.insercionVertices(12,"Surinam");
+            grafo6.insercionVertices(13,"Haiti");
+            grafo6.insercionVertices(14,"Canda");
+            grafo6.insercionVertices(15,"Belice");
+            grafo6.insercionVertices(16,"Brasil");
+            grafo6.insercionVertices(17,"Panama");
+            grafo6.insercionVertices(18,"Guyana Francesa");
+            grafo6.insercionVertices(19,"Uruguay");
+            grafo6.insercionVertices(20,"Costa Rica");
+            grafo6.insercionVertices(21,"Rep. Dominicana <3");
+            grafo6.insercionVertices(22,"Honduras");
+            grafo6.insercionVertices(23,"Cuba");
+            grafo6.insercionVertices(24,"Peru");
+            grafo6.insercionVertices(25,"Bolivia");        
         }
         
         public static void main(String[] args) {
