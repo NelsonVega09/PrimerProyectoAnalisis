@@ -8,7 +8,7 @@ public class Vertice {
     public int beneficio;
     public boolean visitado;
     public boolean marcar;
-    public String lugar;
+    public String nombre;
         
     public ArrayList<Arco> listaArcos = new ArrayList<Arco>();
     
@@ -17,7 +17,7 @@ public class Vertice {
         this.visitado = false;
         this.beneficio = beneficio;
         this.marcar = false;
-        this.lugar = lugar;
+        this.nombre = lugar;
     }
     
     
