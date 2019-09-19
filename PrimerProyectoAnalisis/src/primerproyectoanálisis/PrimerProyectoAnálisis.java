@@ -78,36 +78,36 @@ public class PrimerProyectoAnálisis {
             grafo3.insercionVertices(13,"Pital");
             grafo3.insercionVertices(3,"Puerto Escondido");
             grafo3.insercionVertices(9,"Veracruz");
-            /*
-            grafo3.insertarArco(12, 7);
-            grafo3.insertarArco(7, 12);
-            grafo3.insertarArco(7, 6);
-            grafo3.insertarArco(7, 10);
-            grafo3.insertarArco(6, 7);
-            grafo3.insertarArco(10, 7);
-            grafo3.insertarArco(10, 15);
-            grafo3.insertarArco(15, 10);
-            grafo3.insertarArco(15, 13);
-            grafo3.insertarArco(15, 11);
-            grafo3.insertarArco(15, 2);
-            grafo3.insertarArco(2, 8);
-            grafo3.insertarArco(2, 15);
-            grafo3.insertarArco(8, 2);
-            grafo3.insertarArco(8, 1);
-            grafo3.insertarArco(1, 8);
-            grafo3.insertarArco(13, 15);
-            grafo3.insertarArco(13, 9);
-            grafo3.insertarArco(13, 3);
-            grafo3.insertarArco(9, 13);
-            grafo3.insertarArco(3, 13);
-            grafo3.insertarArco(11, 15);
-            grafo3.insertarArco(11, 5);
-            grafo3.insertarArco(11, 14);
-            grafo3.insertarArco(5, 11);
-            grafo3.insertarArco(4, 14);
-            grafo3.insertarArco(14, 11);
-            grafo3.insertarArco(14, 4);
-            */
+            
+            grafo3.insertarArco("San Ramon", "Zarcero");
+            grafo3.insertarArco("Zarcero", "San Ramon");
+            grafo3.insertarArco("Zarcero", "Naranjo");
+            grafo3.insertarArco("Zarcero", "Ciudad Quesada");
+            grafo3.insertarArco("Naranjo", "Zarcero");
+            grafo3.insertarArco("Ciudad Quesada", "Zarcero");
+            grafo3.insertarArco("Ciudad Quesada", "Aguaz Zarcas");
+            grafo3.insertarArco("Aguaz Zarcas", "Ciudad Quesada");
+            grafo3.insertarArco("Aguaz Zarcas", "Pital");
+            grafo3.insertarArco("Aguaz Zarcas", "Muelle");
+            grafo3.insertarArco("Aguaz Zarcas", "Rio Cuarto");
+            grafo3.insertarArco("Rio Cuarto", "Santa Rita");
+            grafo3.insertarArco("Rio Cuarto", "Aguaz Zarcas");
+            grafo3.insertarArco("Santa Rita", "Rio Cuarto");
+            grafo3.insertarArco("Santa Rita", "Santa Isabel");
+            grafo3.insertarArco("Santa Isabel", "Santa Rita");
+            grafo3.insertarArco("Pital", "Aguaz Zarcas");
+            grafo3.insertarArco("Pital", "Veracruz");
+            grafo3.insertarArco("Pital", "Puerto Escondido");
+            grafo3.insertarArco("Veracruz", "Pital");
+            grafo3.insertarArco("Puerto Escondido", "Pital");
+            grafo3.insertarArco("Muelle", "Aguaz Zarcas");
+            grafo3.insertarArco("Muelle", "Fortuna");
+            grafo3.insertarArco("Muelle", "Santa Clara");
+            grafo3.insertarArco("Fortuna", "Muelle");
+            grafo3.insertarArco("Florencia", "Santa Clara");
+            grafo3.insertarArco("Santa Clara", "Muelle");
+            grafo3.insertarArco("Santa Clara", "Florencia");
+            
             grafo4.insercionVertices(1,"");
             grafo4.insercionVertices(2,"");
             grafo4.insercionVertices(3,"");
@@ -244,6 +244,7 @@ public class PrimerProyectoAnálisis {
         public static void main(String[] args) {
                 crearGrafos();
                 greedy.greedy(grafo1);
+                greedy.greedy(grafo3);
         }
         
 }
