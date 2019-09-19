@@ -1,7 +1,7 @@
 package primerproyectoanálisis;
 import algoritmos.MaximoBeneficio;
 import algoritmos.ejerC;
-import algoritmos.ejerD;
+import algoritmos.cantMaxRest;
 import algoritmos.greedy;
 import grafo.Grafo;
 
@@ -17,7 +17,7 @@ public class PrimerProyectoAnálisis {
         public static greedy greedy = new greedy();
         public static MaximoBeneficio maximoBeneficio = new MaximoBeneficio();
         public static ejerC ejerC = new ejerC();
-        public static ejerD ejerD = new ejerD();
+        public static cantMaxRest cantMaxRest = new cantMaxRest();
         
         static void crearGrafos(){
             grafo1.insercionVertices(13, "Santa Clara");
@@ -272,10 +272,20 @@ public class PrimerProyectoAnálisis {
             grafo6.insercionVertices(25,"Bolivia");        
         }
         
+        static void desmarcar(){
+            grafo1.desmarcar();
+            grafo2.desmarcar();
+            grafo3.desmarcar();
+            grafo4.desmarcar();
+            grafo5.desmarcar();
+            grafo6.desmarcar();    
+        }
+        
         public static void main(String[] args) {
-                crearGrafos();
-                greedy.greedy(grafo1);
-                greedy.greedy(grafo3);
+                crearGrafos();               
+                System.out.println("-Max Beneficio");
+                maximoBeneficio.maximoBeneficio(grafo2);
+       
         }
         
 }
