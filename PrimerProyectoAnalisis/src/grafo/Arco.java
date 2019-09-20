@@ -1,12 +1,12 @@
 package grafo;
 
 public class Arco {
-    public int destino;
+    public String destino;
     public boolean visitado;
 
     
     
-    public Arco(int destino) {
+    public Arco(String destino) {
         this.destino = destino;
         this.visitado = false;
     }
