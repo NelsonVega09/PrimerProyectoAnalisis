@@ -8,6 +8,8 @@ public class greedy {
 
     public static int comp = 0;
     public static int asig = 0;
+    public static int lin = 0;
+    
     public void greedy(Grafo grafoM){
         asig++;
         ArrayList<Vertice> grafo = grafoM.grafo;

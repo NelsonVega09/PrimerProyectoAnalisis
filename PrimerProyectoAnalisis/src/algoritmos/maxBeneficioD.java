@@ -1,7 +1,7 @@
 package algoritmos;
 
 
-public class ejerC {
+public class maxBeneficioD {
     
         
 }
