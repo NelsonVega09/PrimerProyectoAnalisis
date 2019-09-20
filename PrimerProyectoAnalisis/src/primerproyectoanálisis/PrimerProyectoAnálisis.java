@@ -1,6 +1,6 @@
 package primerproyectoanálisis;
 import algoritmos.MaxBeneficio;
-import algoritmos.ejerC;
+import algoritmos.maxBeneficioD;
 import algoritmos.cantMaxRest;
 import algoritmos.greedy;
 import grafo.Grafo;
@@ -20,7 +20,7 @@ public class PrimerProyectoAnálisis {
         public static Grafo grafo6 = new Grafo();
 
         public static greedy greedy = new greedy();
-        public static ejerC ejerC = new ejerC();
+        public static maxBeneficioD ejerC = new maxBeneficioD();
         public static cantMaxRest cantMaxRest = new cantMaxRest();
         public static MaxBeneficio maxBeneficio = new MaxBeneficio();
         
@@ -375,6 +375,72 @@ public class PrimerProyectoAnálisis {
             tiempoFinal = System.nanoTime();
             System.out.println("Tiempo: " + (tiempoFinal-tiempoInicio) + " nanosegundos.");
         }        
+        static void maximoBeneficioB(){
+            System.out.println("Algoritmo B (Maximo Beneficio)");
+            desmarcar();
+            tiempoInicio = System.nanoTime();                
+            System.out.println("GRAFO 1");
+            maxBeneficio.maxBeneficio(grafo1);
+            tiempoFinal = System.nanoTime();
+            System.out.println("Tiempo: " + (tiempoFinal-tiempoInicio) + " nanosegundos.");
+            tiempoInicio = System.nanoTime(); 
+            System.out.println("~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~");
+            System.out.println("GRAFO 2");
+            maxBeneficio.maxBeneficio(grafo2);
+            tiempoFinal = System.nanoTime();
+            System.out.println("Tiempo: " + (tiempoFinal-tiempoInicio) + " nanosegundos.");
+            tiempoInicio = System.nanoTime();                
+            System.out.println("~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~");
+            System.out.println("GRAFO 3");
+            maxBeneficio.maxBeneficio(grafo3);
+            tiempoFinal = System.nanoTime();
+            System.out.println("Tiempo: " + (tiempoFinal-tiempoInicio) + " nanosegundos.");
+            tiempoInicio = System.nanoTime();            
+            System.out.println("~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~");
+            System.out.println("GRAFO 4");
+            maxBeneficio.maxBeneficio(grafo4);
+            tiempoFinal = System.nanoTime();
+            System.out.println("Tiempo: " + (tiempoFinal-tiempoInicio) + " nanosegundos.");
+            tiempoInicio = System.nanoTime();                            
+            System.out.println("~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~");
+            System.out.println("GRAFO 5");
+            maxBeneficio.maxBeneficio(grafo5);
+            tiempoFinal = System.nanoTime();
+            System.out.println("Tiempo: " + (tiempoFinal-tiempoInicio) + " nanosegundos.");
+        }        
+        static void maximoBeneficioD(){
+            desmarcar();
+            System.out.println("Algoritmo D (Mayor beneficio)");
+            tiempoInicio = System.nanoTime();                
+            System.out.println("GRAFO 1");
+            //maxBeneficioD.maxBeneficioD(grafo1);
+            tiempoFinal = System.nanoTime();
+            System.out.println("Tiempo: " + (tiempoFinal-tiempoInicio) + " nanosegundos.");
+            tiempoInicio = System.nanoTime(); 
+            System.out.println("~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~");
+            System.out.println("GRAFO 2");
+            //maxBeneficioD.maxBeneficioD(grafo2);
+            tiempoFinal = System.nanoTime();
+            System.out.println("Tiempo: " + (tiempoFinal-tiempoInicio) + " nanosegundos.");
+            tiempoInicio = System.nanoTime();  
+            System.out.println("~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~");
+            System.out.println("GRAFO 3");
+            //maxBeneficioD.maxBeneficioD(grafo3);
+            tiempoFinal = System.nanoTime();
+            System.out.println("Tiempo: " + (tiempoFinal-tiempoInicio) + " nanosegundos.");
+            tiempoInicio = System.nanoTime();  
+            System.out.println("~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~");
+            System.out.println("GRAFO 4");
+            //maxBeneficioD.maxBeneficioD(grafo4);
+            tiempoFinal = System.nanoTime();
+            System.out.println("Tiempo: " + (tiempoFinal-tiempoInicio) + " nanosegundos.");
+            tiempoInicio = System.nanoTime();                
+            System.out.println("~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~");
+            System.out.println("GRAFO 5");
+            //maxBeneficioD.maxBeneficioD(grafo5);
+            tiempoFinal = System.nanoTime();
+            System.out.println("Tiempo: " + (tiempoFinal-tiempoInicio) + " nanosegundos.");
+        }
         static void maxRest(){
             desmarcar();
             System.out.println("Algoritmo C (Maxima cantidad de restaurantes)");
@@ -408,72 +474,6 @@ public class PrimerProyectoAnálisis {
             tiempoFinal = System.nanoTime();
             System.out.println("Tiempo: " + (tiempoFinal-tiempoInicio) + " nanosegundos.");
         }
-        static void maximoBeneficioB(){
-            System.out.println("Algoritmo B (Maximo Beneficio)");
-            desmarcar();
-            tiempoInicio = System.nanoTime();                
-            System.out.println("GRAFO 1");
-            //maximoBeneficio.maximoBeneficio(grafo1);
-            tiempoFinal = System.nanoTime();
-            System.out.println("Tiempo: " + (tiempoFinal-tiempoInicio) + " nanosegundos.");
-            tiempoInicio = System.nanoTime(); 
-            System.out.println("~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~");
-            System.out.println("GRAFO 2");
-            //maximoBeneficio.maximoBeneficio(grafo2);
-            tiempoFinal = System.nanoTime();
-            System.out.println("Tiempo: " + (tiempoFinal-tiempoInicio) + " nanosegundos.");
-            tiempoInicio = System.nanoTime();                
-            System.out.println("~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~");
-            System.out.println("GRAFO 3");
-            //maximoBeneficio.maximoBeneficio(grafo3);
-            tiempoFinal = System.nanoTime();
-            System.out.println("Tiempo: " + (tiempoFinal-tiempoInicio) + " nanosegundos.");
-            tiempoInicio = System.nanoTime();            
-            System.out.println("~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~");
-            System.out.println("GRAFO 4");
-            //maximoBeneficio.maximoBeneficio(grafo4);
-            tiempoFinal = System.nanoTime();
-            System.out.println("Tiempo: " + (tiempoFinal-tiempoInicio) + " nanosegundos.");
-            tiempoInicio = System.nanoTime();                            
-            System.out.println("~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~");
-            System.out.println("GRAFO 5");
-            //maximoBeneficio.maximoBeneficio(grafo5);
-            tiempoFinal = System.nanoTime();
-            System.out.println("Tiempo: " + (tiempoFinal-tiempoInicio) + " nanosegundos.");
-        }        
-        static void ejerD(){
-            desmarcar();
-            System.out.println("Algoritmo D (Mayor beneficio)");
-            tiempoInicio = System.nanoTime();                
-            System.out.println("GRAFO 1");
-            //ejerD.ejerD(grafo1);
-            tiempoFinal = System.nanoTime();
-            System.out.println("Tiempo: " + (tiempoFinal-tiempoInicio) + " nanosegundos.");
-            tiempoInicio = System.nanoTime(); 
-            System.out.println("~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~");
-            System.out.println("GRAFO 2");
-            //ejerD.ejerD(grafo2);
-            tiempoFinal = System.nanoTime();
-            System.out.println("Tiempo: " + (tiempoFinal-tiempoInicio) + " nanosegundos.");
-            tiempoInicio = System.nanoTime();  
-            System.out.println("~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~");
-            System.out.println("GRAFO 3");
-            //ejerD.ejerD(grafo3);
-            tiempoFinal = System.nanoTime();
-            System.out.println("Tiempo: " + (tiempoFinal-tiempoInicio) + " nanosegundos.");
-            tiempoInicio = System.nanoTime();  
-            System.out.println("~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~");
-            System.out.println("GRAFO 4");
-            //ejerD.ejerD(grafo4);
-            tiempoFinal = System.nanoTime();
-            System.out.println("Tiempo: " + (tiempoFinal-tiempoInicio) + " nanosegundos.");
-            tiempoInicio = System.nanoTime();                
-            System.out.println("~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~");
-            System.out.println("GRAFO 5");
-            //ejerD.ejerD(grafo5);
-            tiempoFinal = System.nanoTime();
-            System.out.println("Tiempo: " + (tiempoFinal-tiempoInicio) + " nanosegundos.");
-        }
         
         public static void main(String[] args) {
             crearGrafos();
@@ -483,16 +483,17 @@ public class PrimerProyectoAnálisis {
                 System.out.println("    1.Algotirmo A (Greedy)");
                 System.out.println("    2.Algortimo B (Maximo beneficio)");
                 System.out.println("    3.Algortimo C (Maxima cantidad de restaurantes)");
-                System.out.println("    $.Algortimo D (Maximo beneficio)");
+                System.out.println("    4.Algortimo D (Maximo beneficio)");
                 Scanner teclado = new Scanner(System.in);
                 opcion = Integer.parseInt(teclado.nextLine());
                 if (opcion == 1)
                         greedy();
                 if (opcion == 2)
-                        System.out.println("AUN NO TENEMOS ESE ALGORTIMO");;
+                        maximoBeneficioB();
                 if (opcion == 3)
                         greedy();
                 if (opcion == 4)
+                        maximoBeneficioB();
                         System.out.println("Estamos trabajando en el segundo, todavia...");;
             }
         }
