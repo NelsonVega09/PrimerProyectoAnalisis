@@ -156,8 +156,8 @@ public class PrimerProyectoAnálisis {
             grafo4.insertarArco("La Palmera","Roomoser");
             grafo4.insertarArco("La Palmera","Golfito");
             grafo4.insertarArco("Golfito","La Palmera");
-            grafo4.insertarArco("La Palmera","Veracruz");
-            grafo4.insertarArco("Veracruz","La Palmera");
+            grafo4.insertarArco("Golfito","Veracruz");
+            grafo4.insertarArco("Veracruz","Golfito");
             grafo4.insertarArco("Golfito","Barrio Mexico");
             grafo4.insertarArco("Barrio Mexico","Golfito");
             grafo4.insertarArco("Barrio Mexico","Perez Z");
@@ -170,6 +170,8 @@ public class PrimerProyectoAnálisis {
             grafo4.insertarArco("Sucre","La Virgen");
             grafo4.insertarArco("Sucre","San Gerardo");
             grafo4.insertarArco("San Gerardo","Sucre");
+            grafo4.insertarArco("Desamparados","Puerto V");
+            grafo4.insertarArco("Puerto V","Desamparados");
 
             grafo5.insercionVertices(1,"Estados Unidos");
             grafo5.insercionVertices(2,"Venezuela");
@@ -203,8 +205,8 @@ public class PrimerProyectoAnálisis {
             grafo5.insertarArco("Mexico", "Costa Rica");
             grafo5.insertarArco("Costa Rica","Belice");
             grafo5.insertarArco("Belice", "Costa Rica");
-            grafo5.insertarArco("Costa Rica","Canda");
-            grafo5.insertarArco("Canda", "Costa Rica");
+            grafo5.insertarArco("Mexico","Canda");
+            grafo5.insertarArco("Canda", "Mexico");
             grafo5.insertarArco("Canda","El Salvador");
             grafo5.insertarArco("El Salvador", "Canda");
             grafo5.insertarArco("El Salvador","Guatemala");
@@ -279,8 +281,8 @@ public class PrimerProyectoAnálisis {
             grafo6.insertarArco("Mexico", "Costa Rica");
             grafo6.insertarArco("Costa Rica","Belice");
             grafo6.insertarArco("Belice", "Costa Rica");
-            grafo6.insertarArco("Costa Rica","Canda");
-            grafo6.insertarArco("Canda", "Costa Rica");
+            grafo5.insertarArco("Mexico","Canda");
+            grafo5.insertarArco("Canda", "Mexico");
             grafo6.insertarArco("Canda","El Salvador");
             grafo6.insertarArco("El Salvador", "Canda");
             grafo6.insertarArco("El Salvador","Guatemala");
@@ -339,11 +341,6 @@ public class PrimerProyectoAnálisis {
         
         public static void main(String[] args) {
                 crearGrafos();  
-                maxBeneficio.maxBeneficio(grafo1);
-                 maxBeneficio.maxBeneficio(grafo2);        
-                  maxBeneficio.maxBeneficio(grafo3);        
-                   maxBeneficio.maxBeneficio(grafo4);        
-                    maxBeneficio.maxBeneficio(grafo5);        
         }
         
         

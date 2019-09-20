@@ -35,9 +35,7 @@ public class MaxBeneficio {
                                                         }
                                                         else{
                                                                 benTotal += sumaArcos(grafo,grafo.buscarVertice(grafo.grafo.get(i).listaArcos.get(j).destino));
-                                                        }
-                                                }
-                                                
+                                                        }                                                }
                                         }
                                 }
                         }
@@ -48,6 +46,7 @@ public class MaxBeneficio {
         
         public void marcar(Grafo grafo, Vertice vertice){
                 for(int i=0 ; i<vertice.listaArcos.size() ; i++){
+                        System.out.println("Marcado como true "+ grafo.buscarVertice(vertice.listaArcos.get(i).destino).nombre);
                         grafo.buscarVertice(vertice.listaArcos.get(i).destino).visitado = true;
                 }
         }
@@ -78,7 +77,6 @@ public class MaxBeneficio {
                                 System.out.println(grafo.buscarVertice(vertice.listaArcos.get(i).destino).nombre);
                                  grafo.buscarVertice(vertice.listaArcos.get(i).destino).visitado = true;
                         }
-                       
                 }
                 return cont;
         }
