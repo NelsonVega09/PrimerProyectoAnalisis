@@ -1,4 +1,5 @@
 package primerproyectoanálisis;
+import algoritmos.MaxBeneficio;
 import algoritmos.MaximoBeneficio;
 import algoritmos.ejerC;
 import algoritmos.cantMaxRest;
@@ -18,6 +19,7 @@ public class PrimerProyectoAnálisis {
         public static MaximoBeneficio maximoBeneficio = new MaximoBeneficio();
         public static ejerC ejerC = new ejerC();
         public static cantMaxRest cantMaxRest = new cantMaxRest();
+        public static MaxBeneficio maxBeneficio = new MaxBeneficio();
         
         static void crearGrafos(){
             grafo1.insercionVertices(13, "Santa Clara");
@@ -133,42 +135,42 @@ public class PrimerProyectoAnálisis {
             grafo4.insercionVertices(18,"Alajuela");
             grafo4.insercionVertices(19,"Moravia");
             grafo4.insercionVertices(20,"Perez Z");
-            /*
-            grafo4.insertarArco(1,12);
-            grafo4.insertarArco(12,1);
-            grafo4.insertarArco(12,19);
-            grafo4.insertarArco(19,12);
-            grafo4.insertarArco(12,16);
-            grafo4.insertarArco(16,12);
-            grafo4.insertarArco(16,4);
-            grafo4.insertarArco(4,16);
-            grafo4.insertarArco(4,17);
-            grafo4.insertarArco(17,4);
-            grafo4.insertarArco(4,18);
-            grafo4.insertarArco(18,4);
-            grafo4.insertarArco(18,14);
-            grafo4.insertarArco(14,18);
-            grafo4.insertarArco(18,2);
-            grafo4.insertarArco(2,18);
-            grafo4.insertarArco(17,11);
-            grafo4.insertarArco(11,17);
-            grafo4.insertarArco(11,13);
-            grafo4.insertarArco(13,11);
-            grafo4.insertarArco(13,3);
-            grafo4.insertarArco(3,11);
-            grafo4.insertarArco(13,9);
-            grafo4.insertarArco(9,13);
-            grafo4.insertarArco(9,20);
-            grafo4.insertarArco(20,9);
-            grafo4.insertarArco(20,15);
-            grafo4.insertarArco(15,20);
-            grafo4.insertarArco(20,7);
-            grafo4.insertarArco(7,20);
-            grafo4.insertarArco(7,6);
-            grafo4.insertarArco(6,7);
-            grafo4.insertarArco(6,5);
-            grafo4.insertarArco(5,6);
-            */
+            
+            grafo4.insertarArco("Rio Cuarto","Pital");
+            grafo4.insertarArco("Pital","Rio Cuarto");
+            grafo4.insertarArco("Pital","Moravia");
+            grafo4.insertarArco("Moravia","Pital");
+            grafo4.insertarArco("Pital","Venecia");
+            grafo4.insertarArco("Venecia","Pital");
+            grafo4.insertarArco("Venecia","Cutris");
+            grafo4.insertarArco("Cutris","Venecia");
+            grafo4.insertarArco("Cutris", "Roomoser");
+            grafo4.insertarArco("Roomoser" ,"Cutris");
+            grafo4.insertarArco("Cutris","Alajuela");
+            grafo4.insertarArco("Alajuela","Cutris");
+            grafo4.insertarArco("Alajuela","Venado");
+            grafo4.insertarArco("Venado","Alajuela");
+            grafo4.insertarArco("Alajuela","Santa Rosa");
+            grafo4.insertarArco("Santa Rosa","Alajuela");
+            grafo4.insertarArco("Roomoser","La Palmera");
+            grafo4.insertarArco("La Palmera","Roomoser");
+            grafo4.insertarArco("La Palmera","Golfito");
+            grafo4.insertarArco("Golfito","La Palmera");
+            grafo4.insertarArco("La Palmera","Veracruz");
+            grafo4.insertarArco("Veracruz","La Palmera");
+            grafo4.insertarArco("Golfito","Barrio Mexico");
+            grafo4.insertarArco("Barrio Mexico","Golfito");
+            grafo4.insertarArco("Barrio Mexico","Perez Z");
+            grafo4.insertarArco("Perez Z","Barrio Mexico");
+            grafo4.insertarArco("Perez Z","Puerto V");
+            grafo4.insertarArco("Puerto V","Perez Z");
+            grafo4.insertarArco("Perez Z","La Virgen");
+            grafo4.insertarArco("La Virgen","Perez Z");
+            grafo4.insertarArco("La Virgen","Sucre");
+            grafo4.insertarArco("Sucre","La Virgen");
+            grafo4.insertarArco("Sucre","San Gerardo");
+            grafo4.insertarArco("San Gerardo","Sucre");
+
             grafo5.insercionVertices(1,"Estados Unidos");
             grafo5.insercionVertices(2,"Venezuela");
             grafo5.insercionVertices(3,"Nicaragua");
@@ -194,56 +196,56 @@ public class PrimerProyectoAnálisis {
             grafo5.insercionVertices(23,"Cuba");
             grafo5.insercionVertices(24,"Peru");
             grafo5.insercionVertices(25,"Bolivia");
-            /*
-            grafo5.insertarArco(1,20);
-            grafo5.insertarArco(20, 1);
-            grafo5.insertarArco(20,7);
-            grafo5.insertarArco(7, 20);
-            grafo5.insertarArco(20,15);
-            grafo5.insertarArco(15, 20);
-            grafo5.insertarArco(20,14);
-            grafo5.insertarArco(14, 20);
-            grafo5.insertarArco(14,4);
-            grafo5.insertarArco(4, 14);
-            grafo5.insertarArco(4,11);
-            grafo5.insertarArco(11, 4);
-            grafo5.insertarArco(15,22);
-            grafo5.insertarArco(22, 15);
-            grafo5.insertarArco(22,25);
-            grafo5.insertarArco(25, 22);
-            grafo5.insertarArco(25,5);
-            grafo5.insertarArco(5, 25);
-            grafo5.insertarArco(5,24);
-            grafo5.insertarArco(24, 5);
-            grafo5.insertarArco(24,10);
-            grafo5.insertarArco(10, 24);
-            grafo5.insertarArco(24,16);
-            grafo5.insertarArco(16, 24);
-            grafo5.insertarArco(10, 24);
-            grafo5.insertarArco(16,8);
-            grafo5.insertarArco(8, 16);
-            grafo5.insertarArco(8,2);
-            grafo5.insertarArco(2, 8);
-            grafo5.insertarArco(24,23);
-            grafo5.insertarArco(23, 24);
-            grafo5.insertarArco(23,12);
-            grafo5.insertarArco(12, 23);
-            grafo5.insertarArco(23,21);
-            grafo5.insertarArco(21, 23);
-            grafo5.insertarArco(23,3);
-            grafo5.insertarArco(3, 23);
-            grafo5.insertarArco(21,13);
-            grafo5.insertarArco(13, 21);
-            grafo5.insertarArco(3,9);
-            grafo5.insertarArco(9, 3);
-            grafo5.insertarArco(12,18);
-            grafo5.insertarArco(18, 12);
-            grafo5.insertarArco(18,6);
-            grafo5.insertarArco(6, 18);
-            grafo5.insertarArco(6,19);
-            grafo5.insertarArco(19, 6);
-            grafo5.insertarArco(6,17);
-            grafo5.insertarArco(17, 6);*/
+            
+            grafo5.insertarArco("Estados Unidos","Costa Rica");
+            grafo5.insertarArco("Costa Rica", "Estados Unidos");
+            grafo5.insertarArco("Costa Rica","Mexico");
+            grafo5.insertarArco("Mexico", "Costa Rica");
+            grafo5.insertarArco("Costa Rica","Belice");
+            grafo5.insertarArco("Belice", "Costa Rica");
+            grafo5.insertarArco("Costa Rica","Canda");
+            grafo5.insertarArco("Canda", "Costa Rica");
+            grafo5.insertarArco("Canda","El Salvador");
+            grafo5.insertarArco("El Salvador", "Canda");
+            grafo5.insertarArco("El Salvador","Guatemala");
+            grafo5.insertarArco("Guatemala", "El Salvador");
+            grafo5.insertarArco("Belice","Honduras");
+            grafo5.insertarArco("Honduras", "Belice");
+            grafo5.insertarArco("Honduras","Bolivia");
+            grafo5.insertarArco("Bolivia", "Honduras");
+            grafo5.insertarArco("Bolivia","Argentina");
+            grafo5.insertarArco("Argentina", "Bolivia");
+            grafo5.insertarArco("Argentina","Peru");
+            grafo5.insertarArco("Peru", "Argentina");
+            grafo5.insertarArco("Peru","Chile");
+            grafo5.insertarArco("Chile", "Peru");
+            grafo5.insertarArco("Peru","Brasil");
+            grafo5.insertarArco("Brasil", "Peru");
+            grafo5.insertarArco("Peru", "Chile");
+            grafo5.insertarArco("Brasil","Colombia");
+            grafo5.insertarArco("Colombia", "Brasil");
+            grafo5.insertarArco("Colombia","Venezuela");
+            grafo5.insertarArco("Venezuela", "Colombia");
+            grafo5.insertarArco("Peru","Cuba");
+            grafo5.insertarArco("Cuba", "Peru");
+            grafo5.insertarArco("Cuba","Surinam");
+            grafo5.insertarArco("Surinam", "Cuba");
+            grafo5.insertarArco("Cuba","Rep. Dominicana <3");
+            grafo5.insertarArco("Rep. Dominicana <3", "Cuba");
+            grafo5.insertarArco("Cuba","Nicaragua");
+            grafo5.insertarArco("Nicaragua", "Cuba");
+            grafo5.insertarArco("Rep. Dominicana <3","Haiti");
+            grafo5.insertarArco("Haiti", "Rep. Dominicana <3");
+            grafo5.insertarArco("Nicaragua","Ecuador");
+            grafo5.insertarArco("Ecuador", "Nicaragua");
+            grafo5.insertarArco("Surinam","Guyana Francesa");
+            grafo5.insertarArco("Guyana Francesa", "Surinam");
+            grafo5.insertarArco("Guyana Francesa","Paraguay");
+            grafo5.insertarArco("Paraguay", "Guyana Francesa");
+            grafo5.insertarArco("Paraguay","Uruguay");
+            grafo5.insertarArco("Uruguay", "Paraguay");
+            grafo5.insertarArco("Paraguay","Panama");
+            grafo5.insertarArco("Panama", "Paraguay");
             
             grafo6.insercionVertices(1,"Estados Unidos");
             grafo6.insercionVertices(2,"Venezuela");
@@ -269,7 +271,61 @@ public class PrimerProyectoAnálisis {
             grafo6.insercionVertices(22,"Honduras");
             grafo6.insercionVertices(23,"Cuba");
             grafo6.insercionVertices(24,"Peru");
-            grafo6.insercionVertices(25,"Bolivia");        
+            grafo6.insercionVertices(25,"Bolivia");    
+           
+            grafo6.insertarArco("Estados Unidos","Costa Rica");
+            grafo6.insertarArco("Costa Rica", "Estados Unidos");
+            grafo6.insertarArco("Costa Rica","Mexico");
+            grafo6.insertarArco("Mexico", "Costa Rica");
+            grafo6.insertarArco("Costa Rica","Belice");
+            grafo6.insertarArco("Belice", "Costa Rica");
+            grafo6.insertarArco("Costa Rica","Canda");
+            grafo6.insertarArco("Canda", "Costa Rica");
+            grafo6.insertarArco("Canda","El Salvador");
+            grafo6.insertarArco("El Salvador", "Canda");
+            grafo6.insertarArco("El Salvador","Guatemala");
+            grafo6.insertarArco("Guatemala", "El Salvador");
+            grafo6.insertarArco("Belice","Honduras");
+            grafo6.insertarArco("Honduras", "Belice");
+            grafo6.insertarArco("Honduras","Bolivia");
+            grafo6.insertarArco("Bolivia", "Honduras");
+            grafo6.insertarArco("Bolivia","Argentina");
+            grafo6.insertarArco("Argentina", "Bolivia");
+            grafo6.insertarArco("Argentina","Peru");
+            grafo6.insertarArco("Peru", "Argentina");
+            grafo6.insertarArco("Peru","Chile");
+            grafo6.insertarArco("Chile", "Peru");
+            grafo6.insertarArco("Peru","Brasil");
+            grafo6.insertarArco("Brasil", "Peru");
+            grafo6.insertarArco("Peru", "Chile");
+            grafo6.insertarArco("Brasil","Colombia");
+            grafo6.insertarArco("Colombia", "Brasil");
+            grafo6.insertarArco("Colombia","Venezuela");
+            grafo6.insertarArco("Venezuela", "Colombia");
+            grafo6.insertarArco("Peru","Cuba");
+            grafo6.insertarArco("Cuba", "Peru");
+            grafo6.insertarArco("Cuba","Surinam");
+            grafo6.insertarArco("Surinam", "Cuba");
+            grafo6.insertarArco("Cuba","Rep. Dominicana <3");
+            grafo6.insertarArco("Rep. Dominicana <3", "Cuba");
+            grafo6.insertarArco("Cuba","Nicaragua");
+            grafo6.insertarArco("Nicaragua", "Cuba");
+            grafo6.insertarArco("Rep. Dominicana <3","Haiti");
+            grafo6.insertarArco("Haiti", "Rep. Dominicana <3");
+            grafo6.insertarArco("Nicaragua","Ecuador");
+            grafo6.insertarArco("Ecuador", "Nicaragua");
+            grafo6.insertarArco("Surinam","Guyana Francesa");
+            grafo6.insertarArco("Guyana Francesa", "Surinam");
+            grafo6.insertarArco("Guyana Francesa","Paraguay");
+            grafo6.insertarArco("Paraguay", "Guyana Francesa");
+            grafo6.insertarArco("Paraguay","Uruguay");
+            grafo6.insertarArco("Uruguay", "Paraguay");
+            grafo6.insertarArco("Paraguay","Panama");
+            grafo6.insertarArco("Panama", "Paraguay");
+            grafo6.insertarArco("Estados Unidos","Chile");
+            grafo6.insertarArco("Chile","Estados Unidos");
+            grafo6.insertarArco("Paraguay","Ecuador");
+            grafo6.insertarArco("Ecuador","Paraguay");
         }
         
         static void desmarcar(){
@@ -282,10 +338,13 @@ public class PrimerProyectoAnálisis {
         }
         
         public static void main(String[] args) {
-                crearGrafos();               
-                System.out.println("-Max Beneficio");
-                maximoBeneficio.maximoBeneficio(grafo2);
-       
+                crearGrafos();  
+                maxBeneficio.maxBeneficio(grafo1);
+                 maxBeneficio.maxBeneficio(grafo2);        
+                  maxBeneficio.maxBeneficio(grafo3);        
+                   maxBeneficio.maxBeneficio(grafo4);        
+                    maxBeneficio.maxBeneficio(grafo5);        
         }
+        
         
 }
