@@ -11,6 +11,8 @@ public class maxBeneficioD {
         public int maxBeneficioTotal = 0;
         public int maxBeneficioParcial = 0;
         public boolean permite = true;
+        public String recorrido = "";
+        public String recorridoP = "";
         
          
          public void maxBeneficioD(Grafo grafo){
@@ -18,41 +20,31 @@ public class maxBeneficioD {
                         recorre(grafo, grafo.grafo.get(i));
                         if(maxBeneficioTotal < maxBeneficioParcial){
                                 maxBeneficioTotal = maxBeneficioParcial;
+                                recorrido = recorridoP;
                         }
+                        maxBeneficioParcial = 0;
+                        recorridoP = "";
                         grafo.desmarcar();
                 }
-                 System.out.println("El maximo beneficio del grafo seria: "+maxBeneficioTotal);
+                System.out.println("El recorrido fue: "+recorrido);
+                System.out.println("El maximo beneficio del grafo seria: "+maxBeneficioTotal);
         }         
          
          
         public void recorre(Grafo grafo, Vertice vertice){
-                if((vertice == null) || (vertice.visitado == true)){
+                if(vertice.visitado == true){
                         return;
                 }
-                if(permite){
-                        if(verifica(grafo,vertice)){
-                                maxBeneficioParcial += vertice.beneficio;
-                                vertice.marcar = true;
-                                System.out.println("Sumo la localidad: "+vertice.nombre);
-                        }
-                        permite = false;
+                if(verifica(grafo,vertice)){
+                        maxBeneficioParcial += vertice.beneficio;
+                        vertice.marcar = true;
+                        recorridoP+=(vertice.nombre+" ");
                 }
-                else{
-                        permite = true;
-                 }
-                
                 vertice.visitado = true;
                 for(int i=0 ; i<vertice.listaArcos.size() ; i++){
                         recorre(grafo,grafo.buscarVertice(vertice.listaArcos.get(i).destino));
                 }
        }
-        
-        
-        public void marcar(Grafo grafo, Vertice vertice){
-                for(int i=0 ; i<vertice.listaArcos.size() ; i++){
-                        grafo.buscarVertice(vertice.listaArcos.get(i).destino).visitado = true;
-                }
-        }
         
         
         public boolean verifica(Grafo grafo, Vertice vertice){
