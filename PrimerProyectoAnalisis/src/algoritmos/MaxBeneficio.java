@@ -28,7 +28,6 @@ public class MaxBeneficio {
                     marcar(grafo,grafo.grafo.get(i));
                     asig++;
                     grafo.grafo.get(i).marcar = true;
-                    //System.out.println(grafo.grafo.get(i).nombre);
                 }
                 else{
                     asig++;
@@ -69,7 +68,6 @@ public class MaxBeneficio {
         for(int i=0 ; i<vertice.listaArcos.size() ; i++){
             comp++;
             asig++;
-            //System.out.println("Marcado como true "+ grafo.buscarVertice(vertice.listaArcos.get(i).destino).nombre);
             asig++;
             grafo.buscarVertice(vertice.listaArcos.get(i).destino).visitado = true;
         }
@@ -109,7 +107,6 @@ public class MaxBeneficio {
                 asig++;
                 cont += grafo.buscarVertice(vertice.listaArcos.get(i).destino).beneficio;
                 grafo.buscarVertice(vertice.listaArcos.get(i).destino).marcar = true;
-                //System.out.println(grafo.buscarVertice(vertice.listaArcos.get(i).destino).nombre);
                 grafo.buscarVertice(vertice.listaArcos.get(i).destino).visitado = true;
             }
         }
