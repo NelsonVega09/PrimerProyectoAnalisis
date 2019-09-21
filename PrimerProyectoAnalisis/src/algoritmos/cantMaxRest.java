@@ -3,39 +3,40 @@ package algoritmos;
 import grafo.Grafo;
 import grafo.Vertice;
 import java.util.ArrayList;
+import static primerproyectoanálisis.PrimerProyectoAnálisis.asig;
+import static primerproyectoanálisis.PrimerProyectoAnálisis.comp;
+import static primerproyectoanálisis.PrimerProyectoAnálisis.lin;
 
 public class cantMaxRest {
-    
-    public static int comp = 0;
-    public static int asig = 0;
-    public static int lin = 0;
+    /**
+     * Calcula la cantidad de restaurantes que es posible seleccionar, 
+     * sin importar su beneficio
+     * @param grafoM 
+     */
     public void cantMaxRest(Grafo grafoM) {
         asig+=3;
-        lin++;
-        int cant = 0; 
-        lin++;
-        ArrayList<Vertice> grafo = grafoM.grafo;
+        lin+=4;
         comp++;
-        lin++;
+        int cant = 0; 
+        ArrayList<Vertice> grafo = grafoM.grafo;
+        //Recorre los vertices ordenados por quien tiene 
+        //la mayor cantidad de arcos, para asi elegir a quien seleccionar
         for(int i=0 ; i<grafo.size() ; i++){
             comp+=2;
             asig++;
-            lin++;
+            lin+=3;
             if(!grafo.get(i).visitado){
                 asig+=3;
-                lin++;
-                grafo.get(i).visitado = true;
-                lin++;
-                cant++;
+                lin+=4;
                 comp++;
-                lin++;
-                for(int j=0 ; j<grafo.get(i).listaArcos.size() ; j++){
+                grafo.get(i).visitado = true;
+                cant++;
+                for(int j=0 ; j < grafo.get(i).listaArcos.size() ; j++){
                     comp++;
                     asig+=2;
-                    lin++;
+                    lin+=3;
                     grafoM.buscarVertice(grafo.get(i).listaArcos.get(j).destino).visitado = true;
                 }
-                //System.out.println(grafo.get(i).nombre);
             }
         }
         System.out.println("La cantidad maxima de restaurantes es de = "+ cant);

@@ -1,15 +1,18 @@
 package grafo;
-
 import java.util.ArrayList;
-
+import static primerproyectoanálisis.PrimerProyectoAnálisis.asig;
+import static primerproyectoanálisis.PrimerProyectoAnálisis.comp;
+import static primerproyectoanálisis.PrimerProyectoAnálisis.lin;
 
 public class Grafo {
     
     public ArrayList<Vertice> grafo = new ArrayList<>();
-    
-    public Grafo() {
-    }
-    
+   
+    /**
+     * Inserta un vertice al grafo, ordenandolo segun beneficio
+     * @param beneficio
+     * @param lugar 
+     */
     public void insercionVertices(int beneficio, String lugar){
         Vertice nuevoVertice = new Vertice(beneficio, lugar);
         if(grafo.isEmpty()){
@@ -25,20 +28,40 @@ public class Grafo {
         grafo.add(nuevoVertice);
     }
    
+    /**
+     * inserta arco al grafo
+     * @param lugar
+     * @param destino 
+     */
     public void insertarArco(String lugar, String destino){
         Arco nuevoArco = new Arco(destino);
         Vertice vOrigen = buscarVertice(lugar);
         vOrigen.listaArcos.add(nuevoArco);
     }
 
+    /**
+     * Retorna un vertice del grafo
+     * @param lugar
+     * @return 
+     */
     public Vertice buscarVertice(String lugar){
+        comp++;
+        asig++;
+        lin+=2;
         for (int i=0; i<grafo.size() ; i++){
+            comp++;
+            comp++;
+            asig++;
+            lin+=3;
             if(grafo.get(i).nombre == lugar)
                 return grafo.get(i);
         }
         return null;
     }
 
+    /**
+     * Limpia el grafo, reinicia los valores de marcar y visitar.
+     */
     public void desmarcar(){
         for (int i=0; i<grafo.size() ; i++){
                 grafo.get(i).visitado = false;
@@ -49,31 +72,55 @@ public class Grafo {
         }
     }
     
+    /**
+     * Imprime la lista de vertices que tiene cada grafo, 
+     * con su respectivo beneficio
+     */
     public void imprimir(){
             for(int i=0 ; i<grafo.size() ; i++){
                     System.out.println(grafo.get(i).nombre+" = "+grafo.get(i).beneficio+"     ");
             }
     }
     
+    /**
+     * Esta funcion ordena el grafo segun la cantidad de
+     * arcos que tiene, para utulizar en el algortimo C
+     */
     public void ordenarGrafo(){
+        asig+=3;
+        comp++;
+        lin+=4;
         ArrayList<Vertice> grafoOrdenado = new ArrayList<>();
         for(int j = 0; j<grafo.size();j++){
-            if(grafoOrdenado.isEmpty())
+            asig++;
+            comp+=3;
+            lin+=3;
+            if(grafoOrdenado.isEmpty()){
+                lin++;
                 grafoOrdenado.add(grafo.get(j));
+            }
             else{
+                asig++;
+                comp++;
+                lin+=2;
                 for(int i = 0; i<grafoOrdenado.size(); i++){
-                    if(grafo.get(j).listaArcos.size() <= grafoOrdenado.get(i).listaArcos.size())
+                    comp+=3;
+                    asig++;
+                    lin+=3;
+                    if(grafo.get(j).listaArcos.size() <= grafoOrdenado.get(i).listaArcos.size()){
+                        lin++;
+                        asig++;
                         grafoOrdenado.add(i, grafo.get(j));
-                    else
+                    }
+                    else{
+                        lin++;
+                        asig++;
                         grafoOrdenado.add(grafo.get(j));
+                    }
                     break;
                 }         
             }        
         }
         this.grafo = grafoOrdenado;
-    }
-    
-     
-    
-    
+    }    
 }
