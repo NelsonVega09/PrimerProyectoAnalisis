@@ -4,7 +4,7 @@
  */
 
 package primerproyectoanálisis;
-import algoritmos.MaxBeneficio;
+import algoritmos.MaxBeneficioRec;
 import algoritmos.maxBeneficioD;
 import algoritmos.cantMaxRest;
 import algoritmos.greedy;
@@ -30,7 +30,7 @@ public class PrimerProyectoAnálisis {
     public static greedy greedy = new greedy();
     public static maxBeneficioD ejerC = new maxBeneficioD();
     public static cantMaxRest cantMaxRest = new cantMaxRest();
-    public static MaxBeneficio maxBeneficio = new MaxBeneficio();
+    public static MaxBeneficioRec maxBeneficioRec = new MaxBeneficioRec();
 
     /*
     Esta funcion inserta de manera quemada 
@@ -388,19 +388,19 @@ public class PrimerProyectoAnálisis {
         System.out.println("Algoritmo B (Maximo Beneficio)");
         desmarcar();
         System.out.println("GRAFO 1");
-        maxBeneficio.maxBeneficio(grafo1);
+        maxBeneficioRec.maxBeneficioRec(grafo1);
         System.out.println("~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~");
         System.out.println("GRAFO 2");
-        maxBeneficio.maxBeneficio(grafo2);
+        maxBeneficioRec.maxBeneficioRec(grafo2);
         System.out.println("~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~");
         System.out.println("GRAFO 3");
-        maxBeneficio.maxBeneficio(grafo3);
+        maxBeneficioRec.maxBeneficioRec(grafo3);
         System.out.println("~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~");
         System.out.println("GRAFO 4");
-        maxBeneficio.maxBeneficio(grafo4);
+        maxBeneficioRec.maxBeneficioRec(grafo4);
         System.out.println("~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~");
         System.out.println("GRAFO 5");
-        maxBeneficio.maxBeneficio(grafo5);
+        maxBeneficioRec.maxBeneficioRec(grafo5);
     } 
     
     /**
@@ -410,19 +410,19 @@ public class PrimerProyectoAnálisis {
         desmarcar();
         System.out.println("Algoritmo D (Mayor beneficio)");
         System.out.println("GRAFO 1");
-        //maxBeneficioD.maxBeneficioD(grafo1);
+        maxBeneficioD.maxBeneficioD(grafo1);
         System.out.println("~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~");
         System.out.println("GRAFO 2");
-        //maxBeneficioD.maxBeneficioD(grafo2);
+        maxBeneficioD.maxBeneficioD(grafo2);
         System.out.println("~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~");
         System.out.println("GRAFO 3");
-        //maxBeneficioD.maxBeneficioD(grafo3);
+        maxBeneficioD.maxBeneficioD(grafo3);
         System.out.println("~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~");
         System.out.println("GRAFO 4");
-        //maxBeneficioD.maxBeneficioD(grafo4);
+        maxBeneficioD.maxBeneficioD(grafo4);
         System.out.println("~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~");
         System.out.println("GRAFO 5");
-        //maxBeneficioD.maxBeneficioD(grafo5);
+        maxBeneficioD.maxBeneficioD(grafo5);
     }
     
     /**
@@ -465,7 +465,7 @@ public class PrimerProyectoAnálisis {
             if (opcion == 3)
                 maxRest();
             if (opcion == 4)
-                maximoBeneficioB();
+                maximoBeneficioD();
         }
     }
 }
