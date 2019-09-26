@@ -42,11 +42,18 @@ public class maxBeneficioD {
             //recorridoP = "";
             grafo.desmarcar();
         }
-        System.out.println("El recorrido fue: "+recorrido);
+        //System.out.println("El recorrido fue: "+recorrido);
         System.out.println("El maximo beneficio del grafo seria: "+ maxBeneficioTotal);
         System.out.println("Asignaciones:" + asig); 
         System.out.println("Comparaciones:" + comp); 
         System.out.println("Lineas de codigo ejecutadas:" + lin); 
+        maxBeneficioTotal = 0;
+        maxBeneficioParcial=0;
+        recorrido="";
+        recorridoP="";
+        lin = 0;
+        comp =0;
+        asig = 0;
     }         
     
     /**

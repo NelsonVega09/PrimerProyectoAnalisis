@@ -25,6 +25,8 @@ public class PrimerProyectoAnálisis {
     public static Grafo grafo4 = new Grafo();
     public static Grafo grafo5 = new Grafo();
     public static Grafo grafo6 = new Grafo();
+    public static Grafo grafo7 = new Grafo();
+    
 
     // --Creacion de la instancia de cada algoritmo
     public static greedy greedy = new greedy();
@@ -345,6 +347,40 @@ public class PrimerProyectoAnálisis {
         grafo6.insertarArco("Chile","Estados Unidos");
         grafo6.insertarArco("Paraguay","Ecuador");
         grafo6.insertarArco("Ecuador","Paraguay");
+        
+        grafo7.insercionVertices(9,"Aguaz Zarcas");
+        grafo7.insercionVertices(10,"Pital");
+        grafo7.insercionVertices(5, "Venecia");
+        grafo7.insercionVertices(20,"Rio Cuarto");
+        grafo7.insercionVertices(7,"La Tabla");
+        grafo7.insercionVertices(3, "Santa Rita");
+        grafo7.insercionVertices(12, "La Flor");
+        grafo7.insercionVertices(11, "La Merced");
+        grafo7.insercionVertices(4, "Santa Isabel");
+        grafo7.insercionVertices(8, "San Miguel");
+
+        grafo7.insertarArco("Aguaz Zarcas", "Pital");
+        grafo7.insertarArco("Pital", "Aguaz Zarcas");
+        grafo7.insertarArco("Aguaz Zarcas", "Santa Rita");
+        grafo7.insertarArco("Santa Rita", "Aguaz Zarcas");
+        grafo7.insertarArco("Pital", "Venecia");
+        grafo7.insertarArco("Venecia", "Pital");
+        grafo7.insertarArco("Venecia", "Rio Cuarto");
+        grafo7.insertarArco("Venecia", "La Tabla");
+        grafo7.insertarArco("La Tabla", "Venecia");
+        grafo7.insertarArco("La Tabla", "Santa Rita");
+        grafo7.insertarArco("La Tabla", "La Merced");
+        grafo7.insertarArco("La Tabla", "La Flor");
+        grafo7.insertarArco("Santa Rita", "La Tabla");
+        grafo7.insertarArco("La Merced", "La Tabla");
+        grafo7.insertarArco("La Merced", "Santa Isabel");
+        grafo7.insertarArco("La Merced", "San Miguel");
+        grafo7.insertarArco("Santa Isabel", "La Merced");
+        grafo7.insertarArco("San Miguel", "La Merced");
+        grafo7.insertarArco("Santa Isabel", "San Miguel");
+        grafo7.insertarArco("San Miguel", "Santa Isabel");
+        grafo7.insertarArco("La Flor", "La Tabla");
+        grafo7.insertarArco("Rio Cuarto", "Venecia");
     }
 
     /**
@@ -409,20 +445,27 @@ public class PrimerProyectoAnálisis {
     static void maximoBeneficioD(){
         desmarcar();
         System.out.println("Algoritmo D (Mayor beneficio)");
-        System.out.println("GRAFO 1");
-        maxBeneficioD.maxBeneficioD(grafo1);
+        //System.out.println("GRAFO 1");
+        //maxBeneficioD.maxBeneficioD(grafo1);
+        //System.out.println("~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~");
+        //System.out.println("GRAFO 2");
+        //maxBeneficioD.maxBeneficioD(grafo2);
+        //System.out.println("~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~");
+        //System.out.println("GRAFO 3");
+        //maxBeneficioD.maxBeneficioD(grafo3);
         System.out.println("~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~");
-        System.out.println("GRAFO 2");
-        maxBeneficioD.maxBeneficioD(grafo2);
+        System.out.println("GRAFO 6 (Ciclico)");
+        maxBeneficioD.maxBeneficioD(grafo6);
         System.out.println("~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~");
-        System.out.println("GRAFO 3");
-        maxBeneficioD.maxBeneficioD(grafo3);
-        System.out.println("~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~");
-        System.out.println("GRAFO 4");
-        maxBeneficioD.maxBeneficioD(grafo4);
-        System.out.println("~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~");
-        System.out.println("GRAFO 5");
-        maxBeneficioD.maxBeneficioD(grafo5);
+        System.out.println("GRAFO 7 (Ciclico)");
+        maxBeneficioD.maxBeneficioD(grafo7);
+        //System.out.println("~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~");
+        //System.out.println("GRAFO 8");
+        //maxBeneficioD.maxBeneficioD(grafo4);
+        //System.out.println("~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~");
+        //System.out.println("GRAFO 9");
+        //maxBeneficioD.maxBeneficioD(grafo5);
+        
     }
     
     /**
