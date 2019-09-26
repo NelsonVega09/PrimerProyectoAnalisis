@@ -14,9 +14,9 @@ public class cantMaxRest {
      * @param grafoM 
      */
     public void cantMaxRest(Grafo grafoM) {
-        asig+=3;
-        lin+=4;
-        comp++;
+        asig=3;
+        lin=4;
+        comp=1;
         int cant = 0; 
         ArrayList<Vertice> grafo = grafoM.grafo;
         //Recorre los vertices ordenados por quien tiene 

@@ -9,6 +9,7 @@ public class Vertice {
     public boolean visitado;
     public boolean marcar;
     public String nombre;
+    public boolean notM;
         
     public ArrayList<Arco> listaArcos = new ArrayList<Arco>();
     

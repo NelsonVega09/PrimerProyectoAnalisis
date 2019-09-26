@@ -13,9 +13,9 @@ public class greedy {
      * @param grafoM 
      */
     public void greedy(Grafo grafoM){
-        asig+=3;
-        lin+=4;
-        comp++;
+        asig=3;
+        lin=4;
+        comp=1;
         ArrayList<Vertice> grafo = grafoM.grafo;
         int beneficioTotal = 0; 
         //Recorre el grafo de vertice con mayor beneficio a menor beneficio, 
@@ -29,6 +29,7 @@ public class greedy {
                 lin+=4;
                 comp++;
                 grafo.get(i).visitado = true;
+                System.out.println(grafo.get(i).nombre);
                 beneficioTotal += grafo.get(i).getBeneficio();
                 //Recorre todos los vertices vecinos para comprobar
                 for(int j=0 ; j<grafo.get(i).listaArcos.size() ; j++){
