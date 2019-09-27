@@ -47,5 +47,4 @@ public class cantMaxRest {
         asig=0;
         comp=0;
     }
-
 }
