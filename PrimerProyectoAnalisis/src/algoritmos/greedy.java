@@ -30,7 +30,7 @@ public class greedy {
                 comp++;
                 grafo.get(i).visitado = true;
                 //System.out.println(grafo.get(i).nombre);
-                beneficioTotal += grafo.get(i).getBeneficio();
+                beneficioTotal += grafo.get(i).beneficio;
                 //Recorre todos los vertices vecinos para comprobar
                 for(int j=0 ; j<grafo.get(i).listaArcos.size() ; j++){
                     comp++;

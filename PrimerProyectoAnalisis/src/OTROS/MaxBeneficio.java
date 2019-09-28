@@ -1,4 +1,4 @@
-package algoritmos;
+package OTROS;
 
 import grafo.Grafo;
 import grafo.Vertice;
@@ -7,7 +7,7 @@ import static primerproyectoanálisis.PrimerProyectoAnálisis.comp;
 import static primerproyectoanálisis.PrimerProyectoAnálisis.lin;
 
 public class MaxBeneficio {
-    
+ 
     /**
      * Este algortimo permite saber el mayor beneficio que puede ser obtenido
      * teniendo en cuanta que los restaurantes no queden uno continuo del otro

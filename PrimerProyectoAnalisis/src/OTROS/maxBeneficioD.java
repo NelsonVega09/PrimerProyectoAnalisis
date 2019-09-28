@@ -1,4 +1,4 @@
-package algoritmos;
+package OTROS;
 import grafo.Grafo;
 import grafo.Vertice;
 import static primerproyectoanálisis.PrimerProyectoAnálisis.asig;

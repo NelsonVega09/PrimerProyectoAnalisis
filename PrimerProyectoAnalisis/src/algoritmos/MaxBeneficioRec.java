@@ -11,7 +11,8 @@ public class MaxBeneficioRec {
     public int benTotal = 0;
     
     /**
-     * 
+     * Esta funcion inicia los valores de analisis, 
+     * llama el algortimo e imprime los valores
      * @param grafo 
      */
     public void maxBeneficioRec(Grafo grafo){
@@ -19,7 +20,7 @@ public class MaxBeneficioRec {
         comp =0;
         asig = 0;
         maximoBeneficio(grafo,grafo.grafo.get(0));
-        //System.out.println("Maximo beneficio:" + benTotal); 
+        System.out.println("Maximo beneficio:" + benTotal); 
         System.out.println("Asignaciones:" + asig); 
         System.out.println("Comparaciones:" + comp); 
         System.out.println("Lineas de codigo ejecutadas:" + lin); 
@@ -29,7 +30,8 @@ public class MaxBeneficioRec {
         asig = 0;
     }
     /**
-     * 
+     * En esta funcion recursiva se busca el mayor beneficio posible
+     * su implementacion funciona para grafos aciclicos y ciclicos
      * @param grafo
      * @param vertice 
      */
@@ -78,7 +80,8 @@ public class MaxBeneficioRec {
         }
     }
     /**
-     * 
+     * Exta funcion es un auxiliar de la funcion principal
+     * que revisa si la suma de los nodos es mayor que el beneficio del grafo
      * @param grafo
      * @param vertice
      * @return 
@@ -131,7 +134,7 @@ public class MaxBeneficioRec {
         }
     }
     /**
-     * 
+     * esta funcion marca el nodo como utilizado en la suma del beneficio
      * @param grafo
      * @param vertice 
      */
@@ -146,7 +149,7 @@ public class MaxBeneficioRec {
         }
     }
     /**
-     * 
+     * esta funcion revisa si un nodo vecino esta siendo utilizado
      * @param grafo
      * @param vertice
      * @return 

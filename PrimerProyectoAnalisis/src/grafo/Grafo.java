@@ -4,6 +4,10 @@ import static primerproyectoanálisis.PrimerProyectoAnálisis.asig;
 import static primerproyectoanálisis.PrimerProyectoAnálisis.comp;
 import static primerproyectoanálisis.PrimerProyectoAnálisis.lin;
 
+/**
+ * El grafo consta de una lista donde estan almacenados todos sus vertices
+ * @author Yul
+ */
 public class Grafo {
     
     public ArrayList<Vertice> grafo = new ArrayList<>();
